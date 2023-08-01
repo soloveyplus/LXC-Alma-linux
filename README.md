@@ -1,1 +1,1 @@
-# LXC-Alma-linux
+# Установка и настройка LXC на Alma Linux. Настройка сети LXC. 
