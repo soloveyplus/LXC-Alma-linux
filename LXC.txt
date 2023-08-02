@@ -6,6 +6,15 @@ dnf install bridge-utils
 
 Теперь командой brctl addbr  **
 можем добавлять мост
+mcedit /etc/sysconfig/lxc-net
+с содержимым:
+
+LXC_ADDR="10.1.1.1"
+LXC_NETWORK="10.1.1.0/24"
+LXC_DHCP_RANGE="10.1.1.100,10.1.1.200"
+
+(потом в процессе рестартуем сеть systemctl restart lxc-net  !! потом после установки lxc)
+
 
 2. Создаем файл будущего моста для серых IP
 
